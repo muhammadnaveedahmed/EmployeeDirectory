@@ -18,5 +18,10 @@ namespace EmployeeDirectory
             Salary = salary;
         }
 
+        public override string ToString()
+        {
+            return $"Name: {Name} Salary: {Salary}";
+        }
+
     }
 }
