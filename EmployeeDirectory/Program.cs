@@ -17,7 +17,7 @@ namespace EmployeeDirectory
                 switch (input)
                 {
                     case "1":
-
+                        AddEmployee();
                         break;
                     case "2":
                         PrintEmployees();
@@ -32,6 +32,18 @@ namespace EmployeeDirectory
 
 
             } while (true);
+
+        }
+
+        private static void AddEmployee()
+        {
+            Console.WriteLine("Add an employee");
+
+            string name = Util.AskForString("Name");
+            uint salary = Util.AskForUInt("Salary");
+
+            payRoll.AddEmployee(name, salary);
+
 
         }
 

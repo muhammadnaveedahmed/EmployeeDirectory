@@ -9,13 +9,16 @@ namespace EmployeeDirectory
     internal class Employee
     {
         public string Name { get; }
-        public int Salary { get; }
+        public uint Salary { get; }
 
-        public Employee(string name, int salary)
+        //public static int Count { get; set; }
+
+        public Employee(string name, uint salary)
         {
             //Validate
             Name = name;
             Salary = salary;
+            //Count++;
         }
 
         public override string ToString()
