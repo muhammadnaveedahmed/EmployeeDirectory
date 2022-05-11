@@ -5,6 +5,28 @@
         private string name;
         private int age;
 
+       private int length ;
+
+        public int Length
+        {
+            get { return length; }
+            set 
+            { 
+                if( value < 0 )
+                {
+                    length = 0;
+                }
+                else
+                {
+                      length = value; 
+                }
+            }
+        }
+
+
+        public int Height { get; set; }
+
+
 
         public Robot(string name, int age)
         {

@@ -10,6 +10,10 @@ namespace EmployeeDirectory
             Robot nisse = new Robot("Nisse", 10);
             string name = kalle.GetName();
             string name2 = nisse.GetName();
+
+            kalle.Length = 20;
+            kalle.SetName("New name");
+            kalle.Height = 13;
            
         }
     }
