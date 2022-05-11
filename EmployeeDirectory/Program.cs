@@ -6,7 +6,11 @@ namespace EmployeeDirectory
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Robot kalle = new Robot("Kalle", 10);
+            Robot nisse = new Robot("Nisse", 10);
+            string name = kalle.GetName();
+            string name2 = nisse.GetName();
+           
         }
     }
 }
