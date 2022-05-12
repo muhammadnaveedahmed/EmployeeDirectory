@@ -7,6 +7,9 @@ namespace EmployeeDirectory
         static PayRoll payRoll = new PayRoll();
         static void Main(string[] args)
         {
+
+           
+
             SeedData();
 
             do
@@ -42,7 +45,9 @@ namespace EmployeeDirectory
             string name = Util.AskForString("Name");
             uint salary = Util.AskForUInt("Salary");
 
-            payRoll.AddEmployee(name, salary);
+            var emp = new Employee(name, salary);
+
+            payRoll.AddEmployee(emp);
 
 
         }
@@ -50,6 +55,7 @@ namespace EmployeeDirectory
         private static void PrintEmployees()
         {
             List<Employee> employees = payRoll.GetEmployees();
+
             foreach (var employee in employees)
             {
                 //Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
@@ -70,6 +76,7 @@ namespace EmployeeDirectory
             payRoll.AddEmployee("Kalle", 20000);
             payRoll.AddEmployee("Anna", 30000);
             payRoll.AddEmployee("Pelle", 40000);
+            payRoll.AddEmployee(new Employee("Owe", 50000));
         }
     }
 }

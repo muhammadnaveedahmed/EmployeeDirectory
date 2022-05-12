@@ -13,6 +13,11 @@ namespace EmployeeDirectory
 
         //public static int Count { get; set; }
 
+        public Employee()
+        {
+
+        }
+
         public Employee(string name, uint salary)
         {
             //Validate

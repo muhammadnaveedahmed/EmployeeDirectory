@@ -47,6 +47,9 @@
             }
         }
 
+      
+
+
         //3. Konstruktor
         //Snippet ctor
         //Det här en default konstruktor den finns även om den inte syns. Tills man skapar en annan konstuktor. Då måste man skriva ut den manuellt för att få tillgång till den.public Robot()
@@ -73,10 +76,10 @@
         //Så här gör man oftast i andra språk tex Java. När vi vill hämta och sätta värden.
         //I C# används nästan alltid properties istället om det inte är så att det är mer komplex logik.
         //Tex att man anropar andra metoder och klasser.
-        public string GetName()
-        {
-            return name;
-        }
+        public string GetName() => name;
+        //{
+        //    return name;
+        //}
 
         public void SetName(string newName)
         {

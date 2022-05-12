@@ -20,6 +20,11 @@ namespace EmployeeDirectory
             Employee employee = new Employee(name, salary);
             payRoll.Add(employee);
         }
+        
+        public void AddEmployee(Employee employee)
+        {
+            payRoll.Add(employee);
+        }
 
         internal List<Employee> GetEmployees()
         {

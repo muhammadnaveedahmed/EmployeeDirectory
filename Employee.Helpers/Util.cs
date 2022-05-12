@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeDirectory
 {
-    internal static class Util
+    public static class Util
     {
         public static string AskForString(string prompt)
         {
@@ -32,7 +32,7 @@ namespace EmployeeDirectory
             return name;
         }
 
-        internal static uint AskForUInt(string prompt)
+        public static uint AskForUInt(string prompt)
         {
             do
             {
