@@ -6,7 +6,7 @@ namespace EmployeeDirectory
     internal class Program
     {
         static PayRoll payRoll = new PayRoll();
-        static ConsoleUI ui = new ConsoleUI();
+        static IUI ui = new ConsoleUI();
         static void Main(string[] args)
         {
 

@@ -1,7 +1,9 @@
-﻿namespace EmployeeDirectory
+﻿using Employee.Helpers;
+
+namespace EmployeeDirectory
 {
     //Publik synlig för alla, Internal synlig inne i den här Assemblyn (Det här programmet)
-    public class Robot
+    public class Robot 
     {
         //Struktur på en klass
         // 1. privata fält

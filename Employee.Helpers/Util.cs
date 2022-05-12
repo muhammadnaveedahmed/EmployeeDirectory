@@ -8,7 +8,7 @@ namespace Employee.Helpers
 {
     public static class Util
     {
-        public static string AskForString(string prompt, ConsoleUI ui)
+        public static string AskForString(string prompt, IUI ui)
         {
             bool success = false;
             string name;
@@ -32,7 +32,7 @@ namespace Employee.Helpers
             return name;
         }
 
-        public static uint AskForUInt(string prompt, ConsoleUI ui)
+        public static uint AskForUInt(string prompt, IUI ui)
         {
             do
             {

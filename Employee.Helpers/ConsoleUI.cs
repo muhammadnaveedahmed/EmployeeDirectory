@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employee.Helpers
 {
-    public class ConsoleUI
+    public class ConsoleUI : IUI
     {
         public string? GetInput()
         {
@@ -15,8 +15,23 @@ namespace Employee.Helpers
 
         public void Print(string message)
         {
-            Console.WriteLine(message); 
+            Console.WriteLine(message);
         }
 
+    }
+
+    public class MockUI : IUI
+    {
+        public static string SetInput { get; set; } = "Kalle";
+
+        public string? GetInput()
+        {
+            return SetInput;
+        }
+
+        public void Print(string message)
+        {
+            
+        }
     }
 }
