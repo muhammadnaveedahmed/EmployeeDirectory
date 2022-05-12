@@ -16,7 +16,7 @@ namespace EmployeeDirectory
             do
             {
                 Console.WriteLine($"{prompt}: ");
-                name = Console.ReadLine();
+                name = Console.ReadLine()!;
 
                 if (string.IsNullOrWhiteSpace(name))
                 {

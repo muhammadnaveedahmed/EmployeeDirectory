@@ -19,7 +19,7 @@ namespace EmployeeDirectory
         {
             Employee employee = new Employee(name, salary);
             payRoll.Add(employee);
-        }
+        } 
         
         public void AddEmployee(Employee employee)
         {
@@ -28,7 +28,7 @@ namespace EmployeeDirectory
 
         internal List<Employee> GetEmployees()
         {
-            return payRoll;
+            return payRoll.ToList();
         }
     }
 }
