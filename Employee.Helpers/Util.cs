@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeDirectory
+namespace Employee.Helpers
 {
     public static class Util
     {
-        public static string AskForString(string prompt)
+        public static string AskForString(string prompt, ConsoleUI ui)
         {
             bool success = false;
             string name;
 
             do
             {
-                Console.WriteLine($"{prompt}: ");
-                name = Console.ReadLine()!;
+                ui.Print($"{prompt}: ");
+                name = ui.GetInput()!;
 
                 if (string.IsNullOrWhiteSpace(name))
                 {
-                    Console.WriteLine($"You must enter a valid {prompt}");
+                   ui.Print($"You must enter a valid {prompt}");
                 }
                 else
                 {
@@ -32,12 +32,12 @@ namespace EmployeeDirectory
             return name;
         }
 
-        public static uint AskForUInt(string prompt)
+        public static uint AskForUInt(string prompt, ConsoleUI ui)
         {
             do
             {
-                string  input = AskForString(prompt);
-                if(uint.TryParse(input, out uint answer))
+                string input = AskForString(prompt, ui);
+                if (uint.TryParse(input, out uint answer))
                 {
                     return answer;
                 }

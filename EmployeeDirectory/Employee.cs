@@ -11,7 +11,7 @@ namespace EmployeeDirectory
         public string Name { get; }
         public uint Salary { get; }
 
-        public SalaryLevel SalaryLevel => Salary < 25000 ? SalaryLevel.Junior : SalaryLevel.Senior;
+        public SalaryLevel SalaryLevel  => Salary < 25000 ? SalaryLevel.Junior : SalaryLevel.Senior;
         //{
         //    get
         //    {

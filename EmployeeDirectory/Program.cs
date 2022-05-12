@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Employee.Helpers;
+using System;
 
 namespace EmployeeDirectory
 {
     internal class Program
     {
         static PayRoll payRoll = new PayRoll();
+        static ConsoleUI ui = new ConsoleUI();
         static void Main(string[] args)
         {
 
@@ -15,17 +17,17 @@ namespace EmployeeDirectory
             do
             {
                 ShowMainMeny();
-                string input = Console.ReadLine();
+                string input = ui.GetInput();
 
                 switch (input)
                 {
-                    case "1":
+                    case MenyHelper.Add:
                         AddEmployee();
                         break;
-                    case "2":
+                    case MenyHelper.Show:
                         PrintEmployees();
                         break;
-                    case "3":
+                    case MenyHelper.Quit:
                         Environment.Exit(0);
                         break;
                     default:
@@ -40,10 +42,10 @@ namespace EmployeeDirectory
 
         private static void AddEmployee()
         {
-            Console.WriteLine("Add an employee");
+            ui.Print("Add an employee");
 
-            string name = Util.AskForString("Name");
-            uint salary = Util.AskForUInt("Salary");
+            string name = Util.AskForString("Name", ui);
+            uint salary = Util.AskForUInt("Salary", ui);
 
             var emp = new Employee(name, salary);
 
@@ -59,15 +61,15 @@ namespace EmployeeDirectory
             foreach (var employee in employees)
             {
                 //Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
-                Console.WriteLine(employee);
+                ui.Print(employee.ToString());
             } 
         }
 
         private static void ShowMainMeny()
         {
-            Console.WriteLine("1: add Employee");
-            Console.WriteLine("2: print Employee");
-            Console.WriteLine("3: quit");
+            ui.Print($"{MenyHelper.Add}: add Employee");
+            ui.Print($"{MenyHelper.Show}: print Employee");
+            ui.Print($"{MenyHelper.Quit}: quit");
         }
 
         private static void SeedData()
